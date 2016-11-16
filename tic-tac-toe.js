@@ -69,6 +69,33 @@ function squareOne() {
     canvas.appendChild(circleOne)
     canvas.appendChild(circleTwo)
     firstSquare = "x"
-
   }
 }
+function squareTwo() {
+  if(secondSquare == "x"){
+    var lineTwo = document.createElementNS(namespace, "line")
+    lineTwo.setAttribute("x1", 115)
+    lineTwo.setAttribute("y1", 115)
+    lineTwo.setAttribute("x2", 195)
+    lineTwo.setAttribute("y2", 195)
+    lineTwo.setAttribute("stroke", "Red")
+    lineTwo.setAttribute("stroke-width", "8")
+
+    var lineThree = document.createElementNS(namespace, "line")
+    lineThree.setAttribute("x1", "195")
+    lineThree.setAttribute("y1", "115")
+    lineThree.setAttribute("x2", "115")
+    lineThree.setAttribute("y2", "195")
+    lineThree.setAttribute("stroke", "Red")
+    lineThree.setAttribute("stroke-width", "8")
+
+    var circle = document.createElementNS(namespace, "circle")
+    circle.setAttribute("cx", "155")
+    circle.setAttribute("cy", "155")
+    circle.setAttribute("r", "145")
+    circle.setAttribute("fill", "white")
+
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(circle)
+    canvas.appendChild(lineTwo)
+    canvas.appendChild(lineThree)

@@ -77,12 +77,12 @@ function squareTwo() {
   if(secondSquare == "O"){
     var circle = document.createElementNS(namespace, "circle")
     circle.setAttribute("cx", "155")
-    circle.setAttribute("cy", "155")
+    circle.setAttribute("cy", "55")
     circle.setAttribute("r", "45")
     circle.setAttribute("fill", "red")
 
     var circleThree = document.createElementNS(namespace, "circle")
-    circleThree.setAttribute("cx", "55")
+    circleThree.setAttribute("cx", "155")
     circleThree.setAttribute("cy", "55")
     circleThree.setAttribute("r", "35")
     circleThree.setAttribute("fill", "red")
@@ -98,18 +98,18 @@ var thirdSquare = "x"
 function squareThree() {
   if(thirdSquare == "x"){
     var lineThree = document.createElementNS(namespace, "line")
-    lineThree.setAttribute("x1", 15)
-    lineThree.setAttribute("y1", 15)
-    lineThree.setAttribute("x2", 95)
-    lineThree.setAttribute("y2", 95)
+    lineThree.setAttribute("x1", 215)
+    lineThree.setAttribute("y1", 215)
+    lineThree.setAttribute("x2", 295)
+    lineThree.setAttribute("y2", 295)
     lineThree.setAttribute("stroke", "Red")
     lineThree.setAttribute("stroke-width", "8")
 
     var lineFour = document.createElementNS(namespace, "line")
-    lineFour.setAttribute("x1", "95")
-    lineFour.setAttribute("y1", "15")
-    lineFour.setAttribute("x2", "15")
-    lineFour.setAttribute("y2", "95")
+    lineFour.setAttribute("x1", "295")
+    lineFour.setAttribute("y1", "215")
+    lineFour.setAttribute("x2", "215")
+    lineFour.setAttribute("y2", "295")
     lineFour.setAttribute("stroke", "Red")
     lineFour.setAttribute("stroke-width", "8")
 
@@ -118,5 +118,54 @@ function squareThree() {
     canvas.appendChild(lineFour)
 
     thirdSquare = "X"
+  }
+}
+
+var fourthSquare = "O"
+function squareFour() {
+  if(fourthSquare == "O"){
+    var circleTwo = document.createElementNS(namespace, "circle")
+    circleTwo.setAttribute("cx", "155")
+    circleTwo.setAttribute("cy", "155")
+    circleTwo.setAttribute("r", "45")
+    circleTwo.setAttribute("fill", "red")
+
+    var circleFour = document.createElementNS(namespace, "circle")
+    circleFour.setAttribute("cx", "155")
+    circleFour.setAttribute("cy", "155")
+    circleFour.setAttribute("r", "35")
+    circleFour.setAttribute("fill", "red")
+
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(circleTwo)
+    canvas.appendChild(circleFour)
+  fourthSquare = "O"
+  }
+}
+
+var fifthSquare = "x"
+function squareFive() {
+  if(fifthSquare == "x"){
+    var lineFive = document.createElementNS(namespace, "line")
+    lineFive.setAttribute("x1", 215)
+    lineFive.setAttribute("y1", 15)
+    lineFive.setAttribute("x2", 295)
+    lineFive.setAttribute("y2", 95)
+    lineFive.setAttribute("stroke", "Red")
+    lineFive.setAttribute("stroke-width", "8")
+
+    var lineSix = document.createElementNS(namespace, "line")
+    lineSix.setAttribute("x1", "295")
+    lineSix.setAttribute("y1", "15")
+    lineSix.setAttribute("x2", "215")
+    lineSix.setAttribute("y2", "95")
+    lineSix.setAttribute("stroke", "Red")
+    lineSix.setAttribute("stroke-width", "8")
+
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(lineFive)
+    canvas.appendChild(lineSix)
+
+    fifthSquare = "X"
   }
 }

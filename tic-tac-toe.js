@@ -169,3 +169,19 @@ function squareFive() {
     fifthSquare = "X"
   }
 }
+
+var sixSquare = "O"
+function squareSix() {
+  if(sixSquare == "O"){
+    var circleFive = document.createElementNS(namespace, "circle")
+    circleFive.setAttribute("cx", "55")
+    circleFive.setAttribute("cy", "155")
+    circleFive.setAttribute("r", "45")
+    circleFive.setAttribute("fill", "red")
+
+    var canvas = document.getElementById("game-board")
+    canvas.appendChild(circleFive)
+    canvas.appendChild(circleSix)
+  sixthSquare = "O"
+  }
+}
